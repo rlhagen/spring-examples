@@ -44,7 +44,7 @@ public class JmsMessageRouter implements MessageRouter<JmsMessageRouter.Destinat
             return Destination.RESPONSE;
         if (m instanceof Message.SynchronousRequest)
             return Destination.SYNCHRONOUS;
-        return null;
+        throw new UnsupportedOperationException();
     }
 
 }
